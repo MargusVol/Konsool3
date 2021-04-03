@@ -1,0 +1,114 @@
+Esimene Video
+
+using System;
+
+namespace ConsoleApp6
+{
+    class Program
+    {
+        static void Main()
+        {
+            string UserChoice = string.Empty;
+            do
+
+            {
+                Console.WriteLine("Please enter your target?");
+                int UserTarget = int.Parse(Console.ReadLine());
+
+                int Start = 0;
+
+                while (Start <= UserTarget)
+                {
+                    Console.Write(Start + " ");
+                    Start = Start + 2;
+                }
+                
+                do
+                {
+                    Console.WriteLine("Do you want to continue? - Yes or No?");
+
+                    
+
+                    UserChoice = Console.ReadLine().ToUpper();
+                    if (UserChoice != "YES" && UserChoice != "NO")
+                    {
+                        Console.WriteLine("Invalid Choice, Please say Yes or No");
+                    }
+                } while (UserChoice != "YES" && UserChoice != "NO");
+            } while (UserChoice == "YES");
+
+        }
+    }
+}
+ 
+Teine & Kolmas Video
+
+using System;
+
+namespace ConsoleApp6
+{
+    class Program
+    {
+        public static void Main()
+        {
+            Program.EvenNumbers(30);
+
+            Program P = new Program();
+            int Sum = P.Add(10, 20);
+
+            Console.WriteLine("Sum = {0}", Sum);
+        }
+
+        public int Add(int FN, int SN)
+        {
+            return FN + SN;
+        }
+
+        public static void EvenNumbers(int Target)
+        {
+            int Start = 0;
+
+            while(Start <= Target)
+            {
+                Console.WriteLine(Start);
+                Start = Start + 2;
+            }
+        }
+    }
+}
+
+Neljas Video
+
+using System;
+
+namespace ConsoleApp6
+{
+    class Program
+    {
+        public static void Main()
+        {
+            int[] Numbers = new int[5];
+
+            Numbers[0] = 101;
+            Numbers[1] = 102;
+            Numbers[2] = 103;
+            Numbers[3] = 104;
+            Numbers[4] = 105;
+
+            //ParamsMethod();
+            //ParamsMethod(Numbers);
+            ParamsMethod(Numbers);
+        }
+
+     public static void ParamsMethod(params int[] Numbers)
+        {
+            Console.WriteLine("There are {0} elements", Numbers.Length);
+            foreach(int i in Numbers)
+            {
+                Console.WriteLine(i);
+            }
+        }
+
+    } 
+}
+ 
